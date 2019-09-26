@@ -10,6 +10,14 @@ Use the package manager [pip](https://pip.pypa.io/en/stable/) to install django-
 
     pip install django-html-email-templates
 
+Add the package to your INSTALLED_APPS
+
+    INSTALLED_APPS = [
+        ...
+        'emailtemplates',
+        ...
+    ]
+
 
 ## Usage
 

@@ -1,7 +1,7 @@
 import os
 from setuptools import find_packages, setup
 
-with open(os.path.join(os.path.dirname(__file__), 'README.md')) as readme:
+with open(os.path.join(os.path.dirname(__file__), 'README.md'), 'r') as readme:
     README = readme.read()
 
 # allow setup.py to be run from any path
@@ -15,6 +15,7 @@ setup(
     license='BSD License',
     description='A simple Django app to create and send editable emails.',
     long_description=README,
+    long_description_content_type='text/markdown',
     url='https://www.rhysgibbs.co.uk/',
     author='Rhys Gibbs',
     author_email='development@rhysgibbs.co.uk',
