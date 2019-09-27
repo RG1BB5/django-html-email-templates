@@ -16,7 +16,7 @@ setup(
     description='A simple Django app to create and send editable emails.',
     long_description=README,
     long_description_content_type='text/markdown',
-    url='https://www.rhysgibbs.co.uk/',
+    url='https://github.com/RG1BB5/django-html-email-templates',
     author='Rhys Gibbs',
     author_email='development@rhysgibbs.co.uk',
     classifiers=[
