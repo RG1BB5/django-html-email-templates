@@ -104,6 +104,14 @@ class EmailTemplate(BaseEmailTemplate):
         verbose_name = _('E-Mail Template')
         verbose_name_plural = _('E-Mail Templates')
 
+    title = models.CharField(
+        max_length=255,
+        help_text=_('This is just for reference.')
+    )
+
+    def __str__(self):
+        return self.title
+
 
 class EmailTemplateSettings(models.Model):
     class Meta:
