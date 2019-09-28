@@ -87,7 +87,7 @@ Add the package to your INSTALLED_APPS
         )
 
 
-![alt text](https://github.com/RG1BB5/django-html-emailtemplates/blob/release/0.0.1/example-emailtemplate-field.png "Example EmailTemplateField")
+![alt text](https://github.com/RG1BB5/django-html-emailtemplates/blob/master/example-emailtemplate-field.png "Example EmailTemplateField")
 
 
 ## Features to add
