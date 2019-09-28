@@ -22,9 +22,22 @@ Add the package to your INSTALLED_APPS
 ## Usage
 
     # models.py
+    from emailtemplates.fields import EmailTemplateField
     class Settings(models.Model):
-        contact_form_reply = models.ForeignKey(
-            'emailtemplates.EmailTemplate'
+        contact_form_reply = EmailTemplateField(
+            models.SET_NULL,
+            null=True,
+            email_context="""
+            You can use the following variables in the template:
+            {{ name }}
+            {{ subject_matter }}
+            {% for item in items %}
+                Possible values are:
+                {{ item.title }}
+                {{ item.cost }}
+                {{ item.description }}
+            {% endfor %}
+            """
         )
 
     # views.py
@@ -42,6 +55,13 @@ Add the package to your INSTALLED_APPS
             {
                 'name': enquiry.name,
                 'subject_matter': enquiry.subject,
+                'items': [
+                    {
+                        'title': 'Product',
+                        'cost': '&pound;20.00',
+                        'description': 'Product description...'
+                    }
+                ]
             }
         )
         # send notification to website owner
@@ -67,8 +87,12 @@ Add the package to your INSTALLED_APPS
         )
 
 
+![alt text](https://github.com/RG1BB5/django-html-emailtemplates/blob/release/0.0.1/example-emailtemplate-field.png "Example EmailTemplateField")
+
+
 ## Features to add
 - [ ] Add custom ForeignKey field to display the context that can be used
+- [ ] Add base email header/footer
 - [ ] Add plugins for images/documents
 - [ ] Add better html field
 - [ ] Add support for Wagtail StreamField

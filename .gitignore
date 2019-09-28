@@ -107,3 +107,4 @@ venv.bak/
 # Private files
 /example
 /ignore
+.DS_Store
