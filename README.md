@@ -91,7 +91,6 @@ Add the package to your INSTALLED_APPS
 
 
 ## Features to add
-- [ ] Add custom ForeignKey field to display the context that can be used
 - [ ] Add base email header/footer
 - [ ] Add plugins for images/documents
 - [ ] Add better html field
